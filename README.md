@@ -15,9 +15,10 @@ The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.
 
 ## Sections
 1. [Methodology](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#methodology)
-2. [Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#results)
-3. [Requirements](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#requirements)
-4. [Reproducing Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#reproducing-results)
+    * [Methodology](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#methodology)
+3. [Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#results)
+4. [Requirements](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#requirements)
+5. [Reproducing Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#reproducing-results)
 
 
 ## Methodology
