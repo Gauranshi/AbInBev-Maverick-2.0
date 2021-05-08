@@ -12,6 +12,11 @@ https://share.streamlit.io/arusarkabose/discount-predicter/main/app.py
 
 The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/data.xlsx)
 
+
+## Sections
+1. [Methodology](https://github.com/Gauranshi/AbInBev-Maverick-2.0/edit/main/README.md#methodology)
+2. [Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/edit/main/README.md#results)
+
 ## Methodology
 ### Pre-Processing:
 * Replace missing data with mode of Attribute
