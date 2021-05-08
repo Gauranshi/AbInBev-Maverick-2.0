@@ -13,10 +13,12 @@ https://share.streamlit.io/arusarkabose/discount-predicter/main/app.py
 The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/data.xlsx)
 
 ## Methodology
-### 1. Pre-Processing:
+### Pre-Processing:
 * Replace missing data with mode of Attribute
 * If numerical values are replaced with 0 if less than a threshold(0.0005), to prevent Numerical Overflow
 * Drop non-significant attributes(Ship-to ID, Product Set, Discount_Total)
+* One-hot encode Nominal categorical columns using Pandas
+* Label encode Ordinal categorical columns using Sk-learn
 
 ### Outlier removal
 * Remove data points with Z-score above a threshold. Formula for Z-score is given as:
@@ -57,6 +59,29 @@ Threshold is chosen as 3 as it indicates a spread of 3 Standard Deviation which 
 
 5. **Product Cost**: It is the price of a particular product being sold at POC. Assuming tax rate to be r, total transaction value will be Tax/r, thus procuct price can be given as Tax/(r\*volume)
 
+### Models 
+
+**Training Classifier**
+
+Two classifier are trained:
+* Decision Tree Classifier: Creates a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. 
+* XGBoost Classifer: Boosting is based on week learners and it reduces the bias error thus is usefull to explain variance of the dataset.
+
+Decision Tree has high bias, low variance whereas XGBoost has low bias, high variance, thus ensemble of these two models produces the best results.
+
+**Regressor**
+
+* The Regressor is trained on Non-Zero data points only, while the classifier models are trained on the complete dataset.
+* The Regression results are stacked on the classification predictions for generating the final inference.
+
+XGBoost and Random Forest Regressor were used for inferencing. 
+
+### Results:
+|   Discount |RMSE | RMSE| MAE | MAE | MAPE | MAPE|
+|---------------|------|------|------|------|------|------|
+|               | **Train** | **Test** |  **Train** | **Test** |**Train**| **Test** |
+| Off-Invoice Discount | 0.77 | 0.76 | 0.69 | 0.70 | 0.97 | 0.96 |
+| On-Invoice Discount    | 186.34 | 268.34 | 36.48 | 53.22 | 42.28 | 42.96 |
 
 ## Requirements
 
