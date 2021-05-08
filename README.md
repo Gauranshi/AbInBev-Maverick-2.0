@@ -16,7 +16,7 @@ The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.
 ## Sections
 1. [Methodology](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#methodology)
     * [Pre-Processing](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#pre-processing)
-    * [Outlier Removal](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#outlier=removal)
+    * [Outlier Removal](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#outlier-removal)
     * [Models](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#models)
 2. [Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#results)
 3. [Requirements](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#requirements)
