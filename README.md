@@ -16,7 +16,9 @@ The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.
 ## Sections
 1. [Methodology](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#methodology)
 2. [Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#results)
-
+3. [Requirement](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#requirement)
+4. [Reproducing Results](https://github.com/Gauranshi/AbInBev-Maverick-2.0/blob/main/README.md#reproducing-results)
+Reproducing Results
 ## Methodology
 ### Pre-Processing:
 * Replace missing data with mode of Attribute
@@ -70,7 +72,7 @@ Decision Tree has high bias, low variance whereas XGBoost has low bias, high var
 
 XGBoost and Random Forest Regressor were used for inferencing. 
 
-### Results:
+## Results:
 |   Discount |RMSE | RMSE| MAE | MAE | MAPE | MAPE|
 |---------------|------|------|------|------|------|------|
 |               | **Train** | **Test** |  **Train** | **Test** |**Train**| **Test** |
