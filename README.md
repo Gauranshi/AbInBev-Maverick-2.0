@@ -84,4 +84,6 @@ For installing requirements run -
 
 pip install -r requirements.txt
 ```
+## Reproducing Results
+    Run discount_prediction.ipynb
 
