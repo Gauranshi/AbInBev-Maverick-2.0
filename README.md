@@ -80,8 +80,8 @@ XGBoost and Random Forest Regressor were used for inferencing.
 |   Discount |RMSE | RMSE| MAE | MAE | MAPE | MAPE|
 |---------------|------|------|------|------|------|------|
 |               | **Train** | **Test** |  **Train** | **Test** |**Train**| **Test** |
-| Off-Invoice Discount | 0.77 | 0.76 | 0.69 | 0.70 | 0.97 | 0.96 |
 | On-Invoice Discount    | 186.34 | 268.34 | 36.48 | 53.22 | 42.28 | 42.96 |
+| Off-Invoice Discount | 691.39 | 521.61 | 125.45 | 103.82 | 170.86 | 126.89 |
 
 ## Requirements
 
