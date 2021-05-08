@@ -5,7 +5,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 from sklearn.metrics import mean_squared_error
 from sklearn.utils import check_array
-import matplotlib.pyplot as plt
 from xgboost import XGBRegressor
 from xgboost import XGBClassifier
 #from lazypredict.Supervised import LazyRegressor
@@ -90,10 +89,11 @@ class Infer:
 
     self.clf2_on=pickle.load(open("on_clf2.pickle.dat", "rb"))
    
-    url = 'https://drive.google.com/uc?id=13celyxcevwAaKGcNXjJhHZAHMp0Yl_u8'
-    output = 'data.xlsx'
-    gdown.download(url, output, quiet=False)
-    orig = pd.read_excel('data.xlsx',engine='openpyxl')
+    # url = 'https://drive.google.com/uc?id=13celyxcevwAaKGcNXjJhHZAHMp0Yl_u8'
+    # output = 'data.xlsx'
+    # gdown.download(url, output, quiet=False)
+    # orig = pd.read_csv('data_mod.csv')
+    orig=pd.read_excel('data_mod.xlsx',engine='openpyxl')
     orig=orig.drop(['OnInvoice Discount(LCU)','OffInvoice Discount(LCU)','Discount_Total'],axis=1)
 
     for i in range(len(orig)):
@@ -133,9 +133,9 @@ class Infer:
     self.drop()
     self.one_hot()
     self.label_encode()
-    # self.df=self.df.iloc[0:1,:]
+    #self.df=self.df.iloc[0:1,:]
 
-    # self.cl_preds_off=self.clf_off.predict(self.df)
+    #self.cl_preds_off=self.clf_off.predict(self.df)
     self.cl2_preds_off=self.clf2_off.predict(self.df)
     self.preds_off=self.regressor_off.predict(self.df)
 
@@ -200,14 +200,24 @@ def get_user_input():
     poc_image=st.sidebar.selectbox('Tier of the POC',('Mainstream','Premium'))
     segment=st.sidebar.selectbox('Segment of the POC',('Drink Led','Food Led','Entertainment Led','Institutional','Wholesaler','Not applicable'))
     sub_segment=st.sidebar.selectbox('Sub-Segment of the POC',('Bar','Hybrid','Beer bar','Restaurant','Institutional','Sports Venue','Party Place','Events','Recreational','Quick Dining','Not applicable'))
-    brand=st.sidebar.selectbox('Brand',('BASS',"BECK'S",'BELLE VUE','BIRRA DEL BORGO','CORONA','CUBANISTO','DEUS','DIEKIRCH','GINDER-ALE','GINETTE','GOOSE ISLAND','HOEGAARDEN','HORSE ALE','JUPILER','KRUGER','KWAK','LEFFE','PIEDBOEUF','PURE BLONDE','SAFIR','SCOTCH CTS','STELLA ARTOIS','TRIPEL KARMELIET','VIEUX TEMPS'))
-    sub_brand=st.sidebar.selectbox('Sub-Brand',('BASS PALE ALE',"BECK'S REGULAR",'BELLE VUE EXTRA KRIEK','BELLE VUE GUEUZE','BELLE VUE KRIEK CLASSIQUE','BIRRA DEL BORGO CASTAGNALE','CORONA EXTRA','CUBANISTO PHENOMENAL','CUBANISTO RUM','DEUS','DIEKIRCH BRUIN','DIEKIRCH GRAND CRU','DIEKIRCH PILS','DIEKIRCH XMAS BEER','FLAVOURED ALCOHOLIC','GINDER-ALE',"GOOSE ISLAND HONKER'S ALE",'GINETTE BLANCHE','GINETTE BLONDE','GINETTE FRUIT','GINETTE TRIPEL','GINETTE LAGER','GOOS 312','GOOSE ISLAND IPA','GOOSE ISLAND MIDWAY IPA','HOEGAARDEN 0,0','HOEG RADLER LEMON 0,0','HOEGAARDEN BEATRIX','HOEGAARDEN FORBIDDEN FRUIT','HOEGAARDEN GRAND CRU','HOEGAARDEN JULIUS','HOEGAARDEN RADLER AGRUM 0,0','HOEGAARDEN ROSE 0,0','HOEGAARDEN ROSEE','HOEGAARDEN WHITE','HOEGAARDEN YELLOW','HORSE ALE','JUPILER 0,0','JUPILER BLUE','JUPILER PILS','KRUGER EXPORT','KWAK','LEFF NECT','LEFFE','LEFFE BLONDE','LEFFE BRUNE','LEFFE MIXED','LEFFE RADIEUSE','LEFFE RITUEL 9','LEFFE ROYALE','LEFFE ROYALE CASCADE IPA','LEFFE ROYALE IPA','LEFFE ROYALE MAPUCHE','LEFFE RUBY','LEFFE SANS ALCOOL/ALCOHOLVRIJ','LEFFE TRIPLE','PIEDBOEUF BLONDE','PIEDBOEUF FONCEE','PIEDBOEUF TRIPLE','PURE BLONDE REGULAR','SAFIR REGULAR','SCOTCH CTS','STELLA ARTOIS REGULAR','TRIPEL KARMELIET','VIEUX TEMPS REGULAR'))
+    brand=st.sidebar.selectbox('Brand',('BASS',"BECK'S",'BELLE VUE','BIRRA DEL BORGO','CORONA','CUBANISTO','DEUS','DIEKIRCH','GINDER-ALE','GINETTE','GOOSE ISLAND',
+    'HOEGAARDEN','HORSE ALE','JUPILER','KRUGER','KWAK','LEFFE','PIEDBOEUF','PURE BLONDE','SAFIR','SCOTCH CTS','STELLA ARTOIS','TRIPEL KARMELIET','VIEUX TEMPS'))
+    sub_brand=st.sidebar.selectbox('Sub-Brand',('BASS PALE ALE',"BECK'S REGULAR",'BELLE VUE EXTRA KRIEK','BELLE VUE GUEUZE','BELLE VUE KRIEK CLASSIQUE',
+    'BIRRA DEL BORGO CASTAGNALE','CORONA EXTRA','CUBANISTO PHENOMENAL','CUBANISTO RUM','DEUS','DIEKIRCH BRUIN','DIEKIRCH GRAND CRU','DIEKIRCH PILS',
+    'DIEKIRCH XMAS BEER','FLAVOURED ALCOHOLIC','GINDER-ALE',"GOOSE ISLAND HONKER'S ALE",'GINETTE BLANCHE','GINETTE BLONDE','GINETTE FRUIT','GINETTE TRIPEL',
+    'GINETTE LAGER','GOOS 312','GOOSE ISLAND IPA','GOOSE ISLAND MIDWAY IPA','HOEGAARDEN 0,0','HOEG RADLER LEMON 0,0','HOEGAARDEN BEATRIX','HOEGAARDEN FORBIDDEN FRUIT',
+    'HOEGAARDEN GRAND CRU','HOEGAARDEN JULIUS','HOEGAARDEN RADLER AGRUM 0,0','HOEGAARDEN ROSE 0,0','HOEGAARDEN ROSEE','HOEGAARDEN WHITE','HOEGAARDEN YELLOW',
+    'HORSE ALE','JUPILER 0,0','JUPILER BLUE','JUPILER PILS','KRUGER EXPORT','KWAK','LEFF NECT','LEFFE','LEFFE BLONDE','LEFFE BRUNE','LEFFE MIXED','LEFFE RADIEUSE',
+    'LEFFE RITUEL 9','LEFFE ROYALE','LEFFE ROYALE CASCADE IPA','LEFFE ROYALE IPA','LEFFE ROYALE MAPUCHE','LEFFE RUBY','LEFFE SANS ALCOOL/ALCOHOLVRIJ','LEFFE TRIPLE',
+    'PIEDBOEUF BLONDE','PIEDBOEUF FONCEE','PIEDBOEUF TRIPLE','PURE BLONDE REGULAR','SAFIR REGULAR','SCOTCH CTS','STELLA ARTOIS REGULAR','TRIPEL KARMELIET',
+    'VIEUX TEMPS REGULAR'))
     pack_type=st.sidebar.selectbox('Form of Container',('BOTTLE','KEG','CAN','PERFECTDRAFT','BULK'))
     returnalility=st.sidebar.selectbox('Returnability',('RETURNABLE','OW'))
     volume_2019_product=st.sidebar.number_input('Volume 2019 Product')
     GTO_2019=st.sidebar.number_input('GTO 2019')
     tax=st.sidebar.number_input('Tax')
-    province=st.sidebar.selectbox('Province',('West Flanders','Brussels Capital','Liège','Flemish Brabant','East Flanders','Hainaut','Antwerp','Limburg','Namur','Walloon Brabant'))
+    province=st.sidebar.selectbox('Province',('West Flanders','Brussels Capital','Liège','Flemish Brabant','East Flanders','Hainaut','Antwerp','Limburg','Namur',
+    'Walloon Brabant'))
     
     features = {'Ship_to_ID': ship_to_ID,
             'Volume_2019': Volume_2019,
