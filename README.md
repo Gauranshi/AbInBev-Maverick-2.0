@@ -46,18 +46,7 @@ Threshold is chosen as 3 as it indicates a spread of 3 Standard Deviation which 
                       Tier 0 Mainstream + Tier 1 Premium -> Tier 1 
                       Tier 0 Premium -> Tier 0
 
-3. **Discount Multiplier**: Discount multipier factor based on the average sales volume. The multiplier has been defined through the creation of a slab system which would encourage the PoS to increase the order volumes to move higher up the discount slabs:
-
-| Volume Slab | Discount Multiplier |
-| ----------- | ----------- |
-| > 60 percentile and < 70 percentile | 1.1 |
-| > 70 percentile and < 80 percentile | 1.15 |
-| > 80 percentile and < 90 percentile | 1.2 |
-| > 90 percentile and < 95 percentile | 1.3 |
-| > 95 percentile and < 99 percentile | 1.35 |
-| > 99 percentile and < 99.9 percentile | 1.4 |
-| > 99.9 percentile | 1.5 |
-<br>
+3. **Discount Multiplier**: Discount multipier factor based on the average sales volume. The multiplier has been defined through the creation of a slab system which would encourage the PoS to increase the order volumes to move higher up the discount slabs.
 
 4. **Sales Share**: For each POC, it is the ratio of volume sold by that POC to total volume of liquor sold in that province.
 
