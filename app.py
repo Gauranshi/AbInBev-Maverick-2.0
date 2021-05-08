@@ -135,11 +135,11 @@ class Infer:
     self.label_encode()
     #self.df=self.df.iloc[0:1,:]
 
-    #self.cl_preds_off=self.clf_off.predict(self.df)
-    self.cl2_preds_off=self.clf2_off.predict(self.df)
+    self.cl_preds_off=self.clf_off.predict(self.df)
+    #self.cl2_preds_off=self.clf2_off.predict(self.df)
     self.preds_off=self.regressor_off.predict(self.df)
 
-    self.preds_off=self.preds_off*self.cl2_preds_off
+    self.preds_off=self.preds_off*self.cl_preds_off
 
     self.cl_preds_on=self.clf_on.predict(self.df)
     self.cl2_preds_on=self.clf2_on.predict(self.df)
