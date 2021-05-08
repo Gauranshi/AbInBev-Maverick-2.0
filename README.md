@@ -31,7 +31,7 @@ The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.
 * One-hot encode Nominal categorical columns using Pandas
 * Label encode Ordinal categorical columns using Sk-learn
 
-### Outlier removal
+### Outlier Removal
 * Remove data points with Z-score above a threshold. Formula for Z-score is given as:
 <img src="https://user-images.githubusercontent.com/45457551/117552486-3b6d3700-b069-11eb-9741-a29cb2e22f6d.PNG" width="280" height="70" />
 
