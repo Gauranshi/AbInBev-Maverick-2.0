@@ -6,6 +6,8 @@ An intelligent and efficient model to recommend customized discounts for custome
 Discounts, promotions and pricing strategies drive a major portion of the revenue to the Companies. Hence, it becomes very important for companies to provide discounts by looking at the ROI of the complete discount profile of the customer. Running a promotion or giving a discount can, when done properly, deliver incremental sale or help gaining access to new customers. 
 ## Link to Web-App: 
 https://share.streamlit.io/arusarkabose/discount-predicter/main/app.py
+## Link to Google Collaboratory Notebook:
+https://colab.research.google.com/drive/1cfpiJPzsCb4MxRHAYol0BDo8t6NrO150?usp=sharing
 
 ## Pipeline:
 ![FLOW_DIAG](https://user-images.githubusercontent.com/45457551/117551576-73be4680-b064-11eb-8885-41955a4a8f92.PNG)
