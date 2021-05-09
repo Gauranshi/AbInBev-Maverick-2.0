@@ -84,7 +84,7 @@ XGBoost and Random Forest Regressor were used for inferencing.
 |---------------|------|------|------|------|------|------|
 |               | **Train** | **Test** |  **Train** | **Test** |**Train**| **Test** |
 | On-Invoice Discount    | 186.34 | 268.34 | 36.48 | 53.22 | 42.28 | 42.96 |
-| Off-Invoice Discount | 691.39 | 521.61 | 125.45 | 103.82 | 170.86 | 126.89 |
+| Off-Invoice Discount | 475.28 | 521.61 | 125.45 | 103.82 | 170.86 | 126.89 |
 
 ## Requirements
 
