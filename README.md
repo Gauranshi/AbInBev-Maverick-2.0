@@ -66,7 +66,7 @@ Threshold is chosen as 3 as it indicates a spread of 3 Standard Deviation which 
 
 Two classifier are trained:
 * Decision Tree Classifier: Creates a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. 
-* XGBoost Classifer: Boosting is based on week learners and it reduces the bias error thus is usefull to explain variance of the dataset.
+* XGBoost Classifer: Boosting is based on weak learners and it reduces the bias error thus is useful to explain variance of the dataset.
 
 Decision Tree has high bias, low variance whereas XGBoost has low bias, high variance, thus ensemble of these two models produces the best results.
 
