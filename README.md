@@ -27,8 +27,8 @@ The Dataset can be found [here](https://github.com/Gauranshi/AbInBev-Maverick-2.
 ## Methodology
 ### Pre-Processing:
 * Replace missing data with mode of Attribute
-* If numerical values are replaced with 0 if less than a threshold(0.0005), to prevent Numerical Overflow
-* Drop non-significant attributes(Ship-to ID, Product Set, Discount_Total)
+* Numerical values are replaced with 0 if less than a threshold (0.0005), to prevent Numerical Overflow
+* Drop non-significant attributes (Ship-to ID, Product Set, Discount_Total)
 * One-hot encode Nominal categorical columns using Pandas
 * Label encode Ordinal categorical columns using Sk-learn
 
