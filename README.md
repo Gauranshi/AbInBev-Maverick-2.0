@@ -88,7 +88,6 @@ XGBoost and Random Forest Regressor were used for inferencing.
 
 For installing requirements run - 
 ```
-
 pip install -r requirements.txt
 ```
 ## Reproducing Results
